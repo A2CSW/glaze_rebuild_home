@@ -1,0 +1,3 @@
+payment_id,student_id,amount,date,status
+PAY001,S001,20,2026-06-12,paid
+PAY002,S002,5,2026-06-12,partial

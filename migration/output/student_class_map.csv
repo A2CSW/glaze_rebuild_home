@@ -1,0 +1,391 @@
+student_id,class_name,student_name,first_seen,last_seen,attendance_count,active_flag
+00a0856c7a,Thurs 7-8pm,Lily Ann Nagy,2026-03-19,2026-03-26,2,False
+00bf0d84c0,Stop Mo Sat 2-5pm,Nathaniel Wood,,,1,False
+00e4215f11,Tues 7-8pm,Sophie Gillone,2025-09-02,2026-06-09,34,True
+013f922193,Tues 8-9pm,Daisy Miller,2025-09-02,2026-06-09,34,True
+0163941ba0,art4film 3,Arthur Bilham,2026-04-21,2026-06-09,8,True
+01776f6cf4,Tues 8-9pm,Alice Robinson,2025-09-02,2026-06-09,34,True
+0240ba50e1,Sat 11-12pm,Richie Chalder,2025-09-06,2026-06-13,34,True
+02b5ca88c1,Wed 7-8pm,Harry Dunn,2026-01-07,2026-06-10,18,True
+02cdf797e3,Thurs 6-7pm,Harry Dunham,2026-01-15,2026-05-14,15,True
+043a7ce416,Thurs 6-7pm,Reuben Pearson,2025-09-04,2026-06-11,34,True
+04875defc5,Thurs 8-9pm,Saskia Elliott,2025-11-06,2026-06-11,26,True
+04875defc5,Tues 8-9pm,Saskia Elliott,2025-11-04,2025-11-25,4,False
+04a33a1460,Wed 7-8pm,Lucas Moralee,2025-09-03,2026-06-10,34,True
+04ea8a7beb,Sat 11-12pm,Ethan Fail,2025-09-13,2026-04-04,26,False
+053659fd0c,Pure Drama,Noah Lee,2025-09-09,2025-10-21,7,False
+053659fd0c,Sat 9-10am,Noah Lee,2025-09-06,2026-06-13,34,True
+0675e5632a,Pure Drama,Indi Paine,2026-06-02,2026-06-09,2,True
+06a1ab9f74,Thurs 7-8pm,Elyse Alltimes,2026-06-18,2026-06-18,1,True
+06a1ab9f74,Tues 6-7pm,Elyse Alltimes,2025-09-02,2025-09-09,2,False
+06a1ab9f74,Tues 7-8pm,Elyse Alltimes,2025-09-09,2026-06-09,33,True
+07b829b27e,Sat 10-11am,Ida Bell,2025-09-06,2025-09-13,2,False
+0877622bd5,Wed 7-8pm,Evie Purday,2025-09-03,2026-04-22,28,False
+093d7d7962,Sat 9-10am,Lenny Hopgood,2025-09-06,2026-06-13,34,True
+094326298a,Wed 7-8pm,Kieran Richardson,2025-09-03,2026-01-07,16,False
+0a567e9ae9,Thurs 8-9pm,Emily Sharp,2026-03-12,2026-06-11,11,True
+0c321ef029,Tues 6-7pm,Mya Jones,2025-09-02,2025-09-09,2,False
+0c321ef029,Tues 7-8pm,Mya Jones,2025-09-02,2026-02-03,20,False
+0c9538e46f,Stop Mo Sat 2-5pm,George Sutton,,,1,False
+0d732d303f,Tues 8-9pm,Emily watts,2025-11-11,2025-12-02,4,False
+0e1d2066c5,Wed 7-8pm,Thea Morrison Cairns,2025-09-03,2026-06-10,33,True
+0eaefa3b82,Wed 7-8pm,Millie Glascott,2025-09-03,2026-01-21,18,False
+0f24bfe165,Pure Drama,Connie Mosley,2025-09-02,2026-06-09,34,True
+0f24bfe165,Sat 10-11am,Connie Mosley,2025-09-06,2026-06-13,34,True
+0f4813c1a4,Pure Drama,Elsie peacock,2025-09-02,2026-06-09,26,True
+0fc3567782,Tues 5-6pm,Sofie Scott,2025-09-02,2026-06-09,35,True
+10cb744a4d,Sat 11-12pm,Lottie Erichsen,2025-09-06,2026-06-13,34,True
+119cf3ca47,Wed 7-8pm,Lily Pietrafesa,2025-09-03,2026-06-10,34,True
+11c337681a,Sat 9-10am,Clarice Amorim da Fonseca,2025-09-06,2026-02-07,20,False
+140eac2d6e,Sat 10-11am,Bella Rea,2025-09-06,2026-01-31,19,False
+1518f4ea9f,Sat 9-10am,Cohen Mitchell,2025-09-06,2026-06-13,34,True
+153495edec,Wed 7-8pm,Ava,2026-06-03,2026-06-10,2,True
+1589725fa9,Pure Drama,Tommy Hunter,2025-11-11,2026-03-10,15,False
+1635a65f0d,Sat 11-12pm,Fliss Cole,2026-03-07,2026-03-21,3,False
+1635a65f0d,Tues 7-8pm,Fliss Cole,2026-03-17,2026-06-09,10,True
+17e33752ce,Tues 7-8pm,Maple Garnish,2025-09-02,2026-06-09,34,True
+186e87df5d,Film Jrs,Augie Taylor,2025-12-03,2025-12-03,1,False
+186e87df5d,Stop Mo Sat 2-5pm,Augie Taylor,2026-06-06,2026-07-04,6,True
+1970ff6f18,Stop Mo Sat 2-5pm,Nancy Hughes,,,1,False
+1aeac0fd8a,Sat 9-10am,Bella Similon,2025-09-06,2026-06-13,34,True
+1b054e12d3,Stop Mo Sat 2-5pm,Alba Chick,2026-06-06,2026-07-04,5,True
+1c4518ccf5,Film Snrs,Christopher (chris) Dent,2025-09-10,2026-06-10,17,True
+1df3553e55,Sat 9-10am,Bobbi-Mae Williams,2026-01-31,2026-03-28,8,False
+1df3dd7031,Pure Drama,Daisy bell,2026-01-20,2026-05-19,15,True
+1e04d16a0d,Sat 11-12pm,Megan Carrick,2026-01-24,2026-06-13,16,True
+1f098162a6,Pure Drama,Jax Madderson,2025-09-02,2026-06-09,18,True
+225bac7491,Social Growth,Cassie Davidson,2026-04-23,2026-05-21,5,True
+26894414b5,Sat 10-11am,Xander Hughes,2026-02-07,2026-04-25,9,False
+275788099a,Wed 7-8pm,Martha Lorimer,2026-02-04,2026-06-10,15,True
+28bb3fb3dc,Thurs 7-8pm,Raven Logan,2025-10-02,2025-10-09,2,False
+2956311967,Tues 6-7pm,William Paling,2025-09-30,2026-06-09,31,True
+2964d967d1,Tues 5-6pm,Frankie Coulthard,2025-09-09,2026-06-09,34,True
+2a23321095,Sat 10-11am,Eva Gibson,2025-09-06,2026-06-13,34,True
+2adbbf3658,Film Snrs,Tabitha Poolan,2026-01-21,2026-02-04,2,False
+2aea63632d,Film Jrs,Rayhan Syed,2026-06-03,2026-06-03,1,True
+2c20e6f17e,Tues 6-7pm,Kittie Stockwell-Warwick,2025-09-02,2025-09-09,2,False
+2c20e6f17e,Tues 7-8pm,Kittie Stockwell-Warwick,2025-09-09,2026-06-09,33,True
+2ce88c8d9d,Tues 8-9pm,Aiesha Potts,2025-09-02,2026-05-12,31,True
+2e41b25d78,Pure Drama,Heidi Asher-Gordon,2025-12-02,2025-12-02,1,False
+2e8abc977b,Social Growth,Zac Thompson,2026-04-23,2026-05-21,5,True
+2e974a03fb,Tues 5-6pm,George Scott,2026-01-13,2026-03-03,7,False
+2f23d29aa8,Tues 7-8pm,Grace Appleby,2025-09-30,2026-06-23,30,True
+2fe3cc11f2,Tues 6-7pm,Gracie Taylor,2025-09-02,2025-09-09,2,False
+2fe3cc11f2,Tues 7-8pm,Gracie Taylor,2025-09-02,2025-09-30,5,False
+3073c09143,Thurs 6-7pm,Evelyn Reid-McGlinn,2025-09-04,2026-06-11,34,True
+3094d5b745,Sat 9-10am,Ava Maylin-Donnelly,2025-09-06,2026-06-13,34,True
+31247ea23f,Film Jrs,Cael Foxton,2026-03-04,2026-03-04,1,False
+3146b31f19,Film Jrs,Sebastian Fourie Kalnins,2026-01-28,2026-06-03,8,True
+33713e5b23,Film Jrs,Beatrix Grant,2025-12-03,2026-01-14,3,False
+33713e5b23,Tues 6-7pm,Beatrix Grant,2025-11-25,2026-06-09,24,True
+33781d300d,Tues 6-7pm,Keira Royle,2025-09-02,2026-06-09,35,True
+338b2224cd,Sat 11-12pm,Will Rutherford,2025-09-06,2025-09-13,2,False
+33d6512206,Stop Mo Sat 2-5pm,Joseph Rush,2026-06-06,2026-07-04,5,True
+35974192b4,Pure Drama,Ava Harland,2025-09-02,2025-09-02,1,False
+35974192b4,Tues 6-7pm,Ava Harland,2025-09-02,2025-09-09,2,False
+35974192b4,Tues 7-8pm,Ava Harland,2025-09-02,2026-06-09,34,True
+3622f9024c,Pure Drama,Brogan Fine,2025-09-23,2026-06-09,31,True
+3622f9024c,Thurs 6-7pm,Brogan Fine,2025-09-04,2025-09-25,4,False
+365032d0c5,Film Snrs,Jonathan Hall,2025-09-10,2026-06-10,17,True
+365032d0c5,Tues 7-8pm,Jonathan Hall,2025-09-02,2026-06-09,34,True
+36ef6210b5,Sat 9-10am,Ada Dolinson,2025-09-06,2026-06-13,34,True
+373fd75f59,Pure Drama,Alex Forster,2025-09-02,2026-01-20,4,False
+373fd75f59,Social Growth,Alex Forster,2026-04-23,2026-05-21,5,True
+37805592f7,Sat 11-12pm,Holly Murray,2026-03-21,2026-04-25,4,False
+37805592f7,Wed 7-8pm,Holly Murray,2026-03-25,2026-04-22,3,False
+3930e22606,Thurs 7-8pm,Tara Simlesa,2025-09-25,2026-06-11,31,True
+3a4b918c2d,Stop Mo Sat 2-5pm,Oliver Compton,2026-06-13,2026-06-13,2,True
+3a5eb64254,Tues 5-6pm,Owen McNamara Renzo,2025-09-02,2026-06-09,35,True
+3afd880e24,Thurs 7-8pm,Fearne Kirkpatrick,2025-09-04,2025-10-23,8,False
+3bd7b14426,Thurs 7-8pm,Olivia Tyson,2025-09-04,2025-10-23,8,False
+3bdef27336,Tues 5-6pm,Emily Crossland,2026-01-13,2026-01-27,3,False
+3c6f5dd919,Pure Drama,Amy Taylor,2026-01-20,2026-04-21,11,False
+3d83de109e,Thurs 6-7pm,Fearne Nash,2026-03-26,2026-05-07,5,True
+3dce22b449,Film Snrs,Chris Cheung,2025-09-10,2025-09-24,2,False
+3e30887bc0,Thurs 8-9pm,Samuel Rushent,2025-11-27,2026-06-11,23,True
+3e6566380c,Pure Drama,Cattleya Smith,2026-02-10,2026-03-10,4,False
+3ebe2c12bc,Thurs 6-7pm,Penelope Nesbitt,2025-09-04,2026-06-11,34,True
+41cf46a160,Sat 11-12pm,Lily Dixon,2025-09-06,2026-06-13,34,True
+41d08ddb46,Thurs 8-9pm,Anna Rowley,2025-09-04,2026-06-11,34,True
+41dc61b71a,Pure Drama,Georgina hankin,2026-01-27,2026-03-31,9,False
+42d592922f,Sat 9-10am,Emerson Ridley,2025-09-06,2025-09-06,1,False
+42f4fec4a6,Thurs 8-9pm,Leo Inglis,2025-09-04,2026-06-11,34,True
+431c88da01,Sat 11-12pm,Jensen Phillips,2026-03-14,2026-03-21,2,False
+4359918077,Thurs 8-9pm,Ruby Cairney,2025-09-04,2026-06-11,34,True
+45101e199b,Thurs 7-8pm,Jack William Mason,2025-09-04,2025-10-16,7,False
+45101e199b,Thurs 8-9pm,Jack William Mason,2025-10-09,2026-06-11,29,True
+45a9c10b63,Tues 5-6pm,Ted Volpe,2025-09-02,2025-12-16,16,False
+46a6b73ec9,Thurs 6-7pm,Sylvie MacKnight,2025-09-04,2026-06-11,34,True
+486f86c039,Film Snrs,Finlay Alisandratos,2025-09-10,2026-06-10,16,True
+486f86c039,art4film 3,Finlay Alisandratos,2026-04-21,2026-06-09,8,True
+487cbedd6c,Tues 6-7pm,Ingrid Evers,2025-09-02,2026-06-09,35,True
+49ce4d9251,Sat 9-10am,Teo Marcano,2026-02-07,2026-06-13,15,True
+4ac228b201,Sat 11-12pm,Oliver walton,2025-09-13,2026-05-23,30,True
+4bc3b3d252,Tues 6-7pm,Ethan O'Callaghan,2025-09-30,2025-09-30,1,False
+4c92dc6699,Tues 5-6pm,Marley Savage,2025-09-02,2025-09-30,5,False
+4c92dc6699,Tues 6-7pm,Marley Savage,2025-09-09,2026-06-09,34,True
+4d0867e20b,Sat 9-10am,Poppy Haselhurst,2026-02-28,2026-03-07,2,False
+4e8396b8b3,Thurs 7-8pm,Logan McMahon,2025-09-04,2026-06-11,34,True
+4f7f721940,Sat 10-11am,Elise Baldwin,2025-09-06,2026-06-13,34,True
+502dfa5a30,Tues 6-7pm,William Hodgson,2025-09-02,2026-05-19,33,True
+50a72a93cf,Film Snrs,Alex Evans,2025-09-10,2026-03-11,9,False
+5195c88bd9,Tues 7-8pm,Sebastian Fouire Kalnins,2026-01-06,2026-06-09,19,True
+5198b5c9b0,Thurs 8-9pm,Devon Lewin,2026-02-05,2026-03-19,6,False
+5198b5c9b0,Tues 8-9pm,Devon Lewin,2026-02-03,2026-02-10,2,False
+53a265c15b,Tues 6-7pm,Samuel Kelly,2025-09-02,2025-09-30,5,False
+53a265c15b,Tues 7-8pm,Samuel Kelly,2025-09-02,2025-12-16,14,False
+54eeba482f,Sat 10-11am,Eve Henry,2025-09-06,2026-06-13,34,True
+566d82610f,Film Snrs,Bertie Govantes,2026-01-07,2026-06-10,9,True
+566d82610f,Tues 8-9pm,Bertie Govantes,2025-09-02,2026-02-03,20,False
+566d82610f,art4film 3,Bertie Govantes,2026-04-28,2026-06-09,7,True
+5a16e0bcc7,Tues 6-7pm,Maddison bell christer,2026-01-27,2026-05-19,15,True
+5a6e2b0270,Sat 11-12pm,Alexia Jo Wood,2025-09-06,2026-06-13,34,True
+5bb0de00fd,Sat 11-12pm,Jake Hudson,2025-09-06,2026-06-13,34,True
+5bf54c11d3,Film Jrs,Thomas Duke,2026-05-13,2026-05-13,1,True
+5f41da5147,Tues 8-9pm,Emily Haswell,2026-02-03,2026-03-03,4,False
+5f7d0c7cda,Tues 8-9pm,Roma Burridge,2025-09-02,2026-06-09,34,True
+604c8dd506,Tues 5-6pm,William,2025-09-02,2025-10-07,6,False
+63dac4dbd7,Thurs 7-8pm,James Orr,2025-09-04,2025-09-25,4,False
+63f4c6c720,Sat 10-11am,Ida Chipchase,2025-09-06,2026-01-24,18,False
+64489c85dc,Tues 5-6pm,Alice,2026-03-10,2026-06-09,12,True
+651f432bd1,Film Jrs,Mason Robinson,2026-02-11,2026-05-13,6,True
+651f432bd1,Sat 10-11am,Mason Robinson,2026-02-14,2026-06-13,14,True
+651f432bd1,Thurs 6-7pm,Mason Robinson,2026-02-12,2026-04-23,8,False
+67da41653d,Tues 6-7pm,William Crossland,2026-01-13,2026-02-24,6,False
+68d8f07da6,Tues 7-8pm,Thomas Hanrahan,2025-09-02,2026-06-09,34,True
+696cd20247,art4film 3,Reecy Jameson,2026-04-21,2026-06-09,8,True
+6bfe0701d6,Sat 9-10am,Casper Thompson Armstrong,2026-03-28,2026-06-13,9,True
+6c1dc88b30,Sat 11-12pm,Elsie Houghton,2025-09-06,2025-09-27,4,False
+6ce7572ae4,Tues 6-7pm,Zari Idowu-Read,2025-09-02,2026-06-09,35,True
+6d8812e3af,Tues 6-7pm,Poppy Harrison,2025-09-02,2026-03-24,27,False
+6ec00b14de,Tues 5-6pm,Chloe McNamara Renzo,2025-09-02,2026-06-09,35,True
+6f034c4a1a,Stop Mo Sat 2-5pm,Hugh Forbes,,,1,False
+6f9b1760c0,Thurs 7-8pm,Ada Rigby,2025-09-18,2026-06-11,32,True
+6fb8f0aff7,Sat 11-12pm,Mya Turnbull,2026-02-14,2026-06-13,14,True
+6fe741fcd6,Pure Drama,Adaline healy,2026-01-06,2026-06-09,19,True
+70b28a6201,Film Snrs,Daniel Allen,2025-09-10,2026-06-10,16,True
+716d38dcf1,Sat 10-11am,Louie Alfar,2025-09-06,2026-03-14,5,False
+716d38dcf1,Tues 6-7pm,Louie Alfar,2026-02-24,2026-03-10,3,False
+723bedc6cd,Film Snrs,George Mundy,2025-09-10,2026-04-22,13,False
+72e8427155,Pure Drama,Erica Clark,2026-01-13,2026-05-19,16,True
+7337cee644,Thurs 8-9pm,Heidi Shorting,2025-09-11,2026-06-11,33,True
+745fb2ac2a,Sat 10-11am,Isla Athey,2025-09-06,2026-01-24,18,False
+74c72db4cf,Sat 9-10am,Lorelai Standing,2025-09-06,2026-06-13,34,True
+7514523d66,Film Jrs,Judah Brooks,2025-09-03,2026-06-03,16,True
+75c17e249b,Tues 5-6pm,Penny Molineux,2026-01-06,2026-01-27,4,False
+75fd03c7e1,Film Snrs,Ethan Tan,2025-11-26,2026-06-10,12,True
+774f7c7457,Thurs 7-8pm,Otis Nicholson,2026-01-08,2026-06-11,19,True
+779948d030,Sat 9-10am,Francesca Rutherford,2025-09-06,2025-09-06,1,False
+77c705a1a2,Sat 10-11am,Joyce Schannen,2026-01-10,2026-06-13,17,True
+77c705a1a2,Thurs 7-8pm,Joyce Schannen,2025-09-11,2025-12-18,14,False
+77c705a1a2,Tues 6-7pm,Joyce Schannen,2025-09-02,2025-09-09,2,False
+7a60a1b6e4,Thurs 7-8pm,Cassidy Coulter,2025-09-04,2026-02-12,21,False
+7aa581f1ae,Tues 6-7pm,Arlo Walker,2025-10-07,2026-06-09,30,True
+7bbe20fec8,Stop Mo Sat 2-5pm,Lucy Marshall,,,1,False
+7ca886f4a1,Stop Mo Sat 2-5pm,Eloise Hill,2026-06-06,2026-07-04,5,True
+7d3409d7bd,Sat 10-11am,Evelyn Spencer,2025-09-06,2026-02-28,22,False
+7d3409d7bd,Sat 9-10am,Evelyn Spencer,2025-09-06,2025-10-04,3,False
+7ed4f3756b,Stop Mo Sat 2-5pm,Sam Diffley,,,1,False
+7f4fdbb077,Tues 6-7pm,Orson McNamara Renzo,2025-09-02,2026-06-02,34,True
+7f6f5df53f,Wed 7-8pm,Annie Hogan,2025-09-24,2026-06-10,29,True
+80b8bb12d5,Film Jrs,Ellie Wardle,2025-09-03,2026-06-03,17,True
+80b8bb12d5,Thurs 7-8pm,Ellie Wardle,2025-09-04,2026-06-11,34,True
+80eb0e6127,Thurs 6-7pm,Lucy,2026-05-14,2026-06-11,4,True
+82234c9881,Pure Drama,Robin Kewley,2025-09-02,2025-09-02,1,False
+82234c9881,Tues 6-7pm,Robin Kewley,2025-09-09,2026-06-09,34,True
+82c6a0ced3,Tues 6-7pm,Madeleine Mullen,2026-01-06,2026-06-09,19,True
+8356db82ba,Wed 7-8pm,Poppy McLean,2026-02-11,2026-06-10,13,True
+836a8891c7,Thurs 6-7pm,William Chapple,2025-09-04,2026-06-11,34,True
+84c48e1b0a,Thurs 8-9pm,Grace Estelle Dan,2025-11-13,2026-01-08,7,False
+84c48e1b0a,Tues 8-9pm,Grace Estelle Dan,2025-11-11,2025-11-18,2,False
+8505067b24,Stop Mo Sat 2-5pm,Dylan Jones,2026-06-06,2026-07-04,6,True
+858a538d66,Sat 9-10am,Lily Lonergan,2025-09-13,2026-06-13,33,True
+86d4355336,Tues 5-6pm,Katrina brannen,2026-03-10,2026-03-31,4,False
+8799f368c1,Sat 10-11am,Henry Mundy,2025-09-06,2026-06-13,34,True
+87d9a4c50c,Film Jrs,Annie Armstrong - Godfrey,2026-06-03,2026-06-03,1,True
+8a1ee2fa1d,Thurs 7-8pm,Ellie Hudson,2025-09-04,2026-06-11,34,True
+8a1ee2fa1d,art4film 3,Ellie Hudson,2026-04-21,2026-06-09,8,True
+8a71f77c44,Stop Mo Sat 2-5pm,George Whalley,2026-06-06,2026-07-04,5,True
+8b08c9df01,Thurs 6-7pm,Isaac Watson,2025-09-04,2026-06-11,17,True
+8bd63f8ab6,Sat 9-10am,Ida Miller Jones,2025-09-06,2025-09-13,2,False
+8d1cf1a675,Pure Drama,Niamh Hepburn,2025-09-09,2026-06-02,30,True
+8e460755de,Stop Mo Sat 2-5pm,Felix Oakes,2026-06-06,2026-07-04,9,True
+8e6804b3c3,Tues 7-8pm,Noah Jackson,2025-09-02,2025-11-18,11,False
+8e80221b26,Pure Drama,Jax Taylor,2025-11-04,2026-01-06,8,False
+8e887306b4,Tues 8-9pm,Eleanor Dixon,2026-03-03,2026-06-09,12,True
+8f677e20af,Tues 6-7pm,Henriette Mullarkey-Scott,2025-09-02,2026-06-09,35,True
+92194c519c,Wed 7-8pm,Chloe Patterson,2025-09-03,2026-06-10,34,True
+93d121fd21,Pure Drama,Ayda morgan,2025-10-14,2025-10-14,1,False
+944ee55852,Film Jrs,April James,2025-09-03,2025-11-05,5,False
+944ee55852,Thurs 6-7pm,April James,2025-09-04,2025-11-06,9,False
+9579251f39,Tues 5-6pm,Arlo walker,2025-10-07,2025-10-14,2,False
+9592e86078,Film Jrs,Tom Richardson,2026-01-28,2026-06-03,8,True
+961167ac4e,Sat 10-11am,Leo Alfar,2026-02-14,2026-03-14,4,False
+961167ac4e,Tues 6-7pm,Leo Alfar,2026-02-24,2026-03-10,3,False
+972e0e2193,Sat 9-10am,"Thea Suetterlin (""Taya"")",2025-09-06,2026-06-13,34,True
+98f040221e,Thurs 8-9pm,Harry matthews,2025-10-23,2025-11-27,5,False
+9980f2647b,Sat 9-10am,Kit Gresswell-Pettitt,2025-09-06,2026-06-13,34,True
+998867e22d,Thurs 6-7pm,Paige Bradley,2025-09-04,2025-09-25,4,False
+99db5e791e,Thurs 7-8pm,Esme cole,2026-03-19,2026-06-11,10,True
+9abae7e7c3,Tues 5-6pm,Zach Lee,2025-09-09,2026-06-09,34,True
+9b54378302,Sat 9-10am,Sean Walsh,2026-03-14,2026-05-16,8,True
+9b7af6d3d5,art4film 3,Ruben Ridley,2026-05-12,2026-06-09,4,True
+9f85ba7131,Sat 9-10am,Arlo mitford,2026-05-02,2026-06-13,6,True
+9f98e1362a,Tues 8-9pm,Evan McGuffog,2025-09-02,2026-06-09,34,True
+a04b27d629,art4film 3,Kitty Hudson,2026-04-21,2026-06-09,8,True
+a0e017c6a3,Pure Drama,Anna-Maria Vali,2025-09-02,2026-01-06,16,False
+a128c878fc,Sat 9-10am,Lyra Sorbie,2025-09-06,2026-06-13,34,True
+a16e46ce8d,Pure Drama,Lauren O'Brien,2026-04-21,2026-06-09,7,True
+a281a97eb2,Thurs 8-9pm,Sidney Salem,2026-05-14,2026-06-04,3,True
+a281a97eb2,Tues 8-9pm,Sidney Salem,2026-05-19,2026-06-09,3,True
+a45792816c,Film Snrs,Serenity Cooke,2025-12-10,2026-01-07,2,False
+a45792816c,Tues 8-9pm,Serenity Cooke,2025-09-02,2026-06-09,34,True
+a488a8d30a,Film Snrs,Lacey sharpe,2026-05-06,2026-05-20,3,True
+a488a8d30a,Tues 8-9pm,Lacey sharpe,2026-04-21,2026-05-05,3,True
+a488a8d30a,Wed 7-8pm,Lacey sharpe,2026-04-29,2026-06-10,6,True
+a57614262a,Tues 5-6pm,Edith Bovingdon,2025-09-02,2026-06-09,35,True
+a6897eb08c,Wed 7-8pm,Charlie Wood,2025-09-03,2026-06-10,34,True
+a7122d55fa,Sat 11-12pm,Ben Whiffin,2025-09-06,2026-06-13,34,True
+a822f523f1,Tues 5-6pm,Lillian Woods,2025-09-02,2026-06-09,35,True
+a88ddcd178,Stop Mo Sat 2-5pm,Rory Laycock,2026-06-06,2026-07-04,5,True
+a91ee22cb5,Tues 8-9pm,Macey McGwinn,2025-09-02,2026-06-09,34,True
+aa0f851b1f,Sat 10-11am,Raidhrigh Haddon,2025-09-06,2026-06-13,34,True
+aa42753c51,Sat 10-11am,Eleanor kirkup,2025-09-06,2026-06-13,34,True
+aa4980bc2a,Pure Drama,Eva Williams,2026-02-03,2026-06-09,15,True
+aa9ee066c8,Tues 7-8pm,Thea,2026-03-31,2026-06-09,8,True
+aaf1af0d61,Tues 8-9pm,Lucy Derrick,2025-09-02,2026-06-09,34,True
+aba9b27fda,Sat 9-10am,Abby Ward,2025-09-06,2026-06-13,34,True
+aded904cef,Sat 11-12pm,Maycie McIlwraith,2026-03-14,2026-06-13,11,True
+aeb7b0f0c2,Pure Drama,Ambrose Bowman,2026-06-09,2026-06-09,1,True
+aef3732df4,Sat 9-10am,Ava Borthwick,2026-01-17,2026-06-13,18,True
+af57ddeed6,Thurs 6-7pm,Faye Bradley,2025-09-04,2025-09-25,4,False
+b07858f0e0,Stop Mo Sat 2-5pm,Jay Mccormick,2026-06-06,2026-06-06,2,True
+b25830776c,Tues 7-8pm,Harrison Cory,2025-09-02,2026-06-09,34,True
+b2d888a241,Sat 10-11am,Georgia Rowley,2025-09-06,2026-04-25,28,False
+b2f23fbc49,Wed 7-8pm,Lily May-Campbell,2026-02-11,2026-06-10,13,True
+b336c61d8c,Stop Mo Sat 2-5pm,Alfie Coulter,,,1,False
+b336c61d8c,Tues 7-8pm,Alfie Coulter,2025-09-02,2025-10-07,6,False
+b38b810ea3,Stop Mo Sat 2-5pm,Aundreus,2026-06-06,2026-07-04,5,True
+b433df0381,Thurs 8-9pm,Eve (Eli) Hay,2025-09-04,2025-10-09,6,False
+b43827ef3e,Tues 6-7pm,Lilyana Lawson,2025-09-02,2025-09-09,2,False
+b43827ef3e,Tues 7-8pm,Lilyana Lawson,2025-09-02,2026-06-09,34,True
+b44f42372b,Thurs 7-8pm,Beth Cole,2025-09-11,2026-06-11,33,True
+b4525bccdb,Sat 11-12pm,Kate Newbrook,2025-11-29,2025-12-06,2,False
+b4ea783c36,Thurs 8-9pm,Lana Simlesa,2025-09-18,2026-06-11,32,True
+b5f4663cd6,Thurs 6-7pm,Freya Dunham,2026-01-15,2026-06-11,18,True
+b65f00dc3c,Film Snrs,Holden Partington,2025-09-10,2026-04-22,14,False
+b671ba350e,Sat 11-12pm,Erin Welch,2025-09-06,2025-11-22,11,False
+b79f567c29,Sat 9-10am,Jessica Costello,2025-11-08,2026-06-13,26,True
+b80b5c1d2c,Thurs 8-9pm,Fenris Kilburn,2025-09-04,2026-06-11,26,True
+b80b5c1d2c,Tues 8-9pm,Fenris Kilburn,2025-09-02,2025-12-09,14,False
+b860337faa,Sat 10-11am,Darcey Beattie,2025-09-06,2026-06-13,34,True
+b8bcaac0dc,Tues 5-6pm,Teddy Fellows,2025-09-23,2026-06-09,32,True
+b9287d1ad3,Pure Drama,Anna Hood,2025-09-30,2026-06-09,30,True
+bbc5d12dd2,Film Snrs,Freya Prince,2025-10-08,2025-10-22,2,False
+bd2b48b7f4,Tues 5-6pm,Harriet Woods,2025-09-02,2026-06-09,35,True
+be86090eb4,Thurs 7-8pm,Sofia Murray,2025-09-11,2026-06-11,33,True
+becd7c1664,Thurs 6-7pm,Juno Hutton-Floccari,2025-09-04,2026-06-11,34,True
+c0844ef48e,Sat 11-12pm,Molly Taylor,2025-09-06,2025-09-27,4,False
+c3390ffb60,Social Growth,Sofia Hurrel,2026-04-23,2026-05-21,5,True
+c37c57a317,Thurs 6-7pm,Martha MacLeod,2025-09-04,2026-06-11,34,True
+c6504185be,Tues 8-9pm,Lucy Blackett,2025-09-02,2026-06-09,34,True
+c7654c0ab8,Thurs 8-9pm,Lucy Pears,2025-09-04,2026-06-11,34,True
+c885603a47,Thurs 6-7pm,Erin Fordy,2025-09-04,2026-06-11,34,True
+c90a636bda,Tues 6-7pm,Madhav Chadda,2026-06-09,2026-06-09,1,True
+ca9b33c206,Thurs 8-9pm,Devon,2026-06-04,2026-06-11,2,True
+cacb7f9214,Sat 10-11am,Marla Suetterlin,2025-09-06,2026-06-13,34,True
+cb5830b365,Thurs 6-7pm,Phoenix Hunkin,2026-04-23,2026-06-11,7,True
+cbb0c02dca,Tues 5-6pm,Mia Scott,2026-01-20,2026-03-31,10,False
+cc539bf8cc,Film Snrs,Charlotte Gibson,2025-09-10,2025-09-10,1,False
+cc539bf8cc,Thurs 8-9pm,Charlotte Gibson,2025-09-11,2025-09-25,3,False
+cc539bf8cc,Wed 7-8pm,Charlotte Gibson,2025-09-10,2025-09-24,3,False
+cd1d770076,Thurs 6-7pm,Etta Forrester-Grange,2025-09-04,2026-06-11,34,True
+cd31c0a77a,Tues 8-9pm,Layla Star,2026-02-10,2026-06-09,13,True
+cd8d1da99c,Pure Drama,Rosie brooks,2026-06-02,2026-06-09,2,True
+cdc6fe4f21,Sat 10-11am,Neve Hardy,2025-09-06,2026-04-25,28,False
+ce32995961,Sat 9-10am,Elliott Ridley,2025-09-06,2025-09-06,1,False
+ce38b83d40,Sat 11-12pm,Rose Pierson,2025-09-06,2026-01-31,19,False
+cf541c27f9,Film Snrs,Samuel Fowler,2025-09-10,2026-06-10,17,True
+cf541c27f9,Tues 8-9pm,Samuel Fowler,2025-09-02,2025-11-11,10,False
+cfa36b7c75,Stop Mo Sat 2-5pm,Noah,2026-06-06,2026-06-06,2,True
+d1074e787f,Tues 8-9pm,Megan McClay,2026-02-03,2026-03-03,4,False
+d12a6fe40e,Thurs 7-8pm,Liz Rogerson,2025-09-04,2025-11-20,11,False
+d1963dcf83,Pure Drama,Eva Howson,2026-01-13,2026-03-24,10,False
+d1c5a1cdc6,Tues 8-9pm,Stanley McVey,2025-09-02,2026-06-09,34,True
+d1f9f31797,Stop Mo Sat 2-5pm,Sienna Wildsmith Pattison,,,1,False
+d1f9f31797,art4film 3,Sienna Wildsmith Pattison,2026-04-21,2026-06-09,8,True
+d23ac901ad,Film Jrs,Bo Reef Davies,2025-09-03,2026-05-13,16,True
+d23ac901ad,Wed 7-8pm,Bo Reef Davies,2025-09-03,2025-09-24,4,False
+d3a7763a3d,Thurs 6-7pm,Heidi Short,2026-03-26,2026-06-11,9,True
+d40041140d,Student Data,Student ID,,,20,False
+d50d8288ce,Thurs 8-9pm,Ellie Lee,2025-09-04,2025-09-18,3,False
+d5754bfc0e,Sat 10-11am,Ivy Wyatt,2025-09-20,2026-04-25,26,False
+d6c5741f0f,Film Jrs,Lukas Davies,2025-09-03,2025-09-17,2,False
+d788121eac,Sat 9-10am,Frankie Hopkins,2025-09-06,2026-06-13,34,True
+d79bea3496,Social Growth,Ruby Fuller,2026-04-23,2026-05-21,5,True
+d8ea48bc5a,Stop Mo Sat 2-5pm,Emily,,,1,False
+d928dc6134,Pure Drama,Sophie Taylor,2025-10-14,2026-06-09,28,True
+da8cbe9770,Tues 7-8pm,Stan McVey,2026-02-03,2026-02-03,1,False
+dbe211c5c6,Tues 7-8pm,Charlie Watts,2026-02-03,2026-06-09,15,True
+de59bf14c4,Sat 11-12pm,Alfie Henderson,2025-09-06,2025-09-27,4,False
+de8d657c4c,Sat 11-12pm,Lola Williams,2026-02-07,2026-06-13,15,True
+e1880e2c04,Film Snrs,Emmy Crompton,2026-01-21,2026-06-10,9,True
+e1880e2c04,Wed 7-8pm,Emmy Crompton,2026-01-14,2026-01-21,2,False
+e20e304835,Wed 7-8pm,Jake Fraser,2026-02-25,2026-05-20,11,True
+e324374d04,art4film 3,Gracie beagarie,2026-04-21,2026-06-09,8,True
+e47e998c01,Stop Mo Sat 2-5pm,Samuel Williams,2026-06-06,2026-07-04,5,True
+e4f54b344d,Sat 11-12pm,Romilly Gray,2026-02-07,2026-03-21,6,False
+e504a7db87,Tues 6-7pm,Pearl Dunn,2026-01-06,2026-01-27,4,False
+e50a8db5e1,Film Snrs,Thomas Burns,2025-11-12,2026-06-10,13,True
+e50a8db5e1,Tues 8-9pm,Thomas Burns,2025-11-25,2026-02-24,7,False
+e51e6b00a2,Sat 9-10am,Jessica Taggert,2025-11-22,2026-06-13,24,True
+e558fbff13,Tues 8-9pm,Melik mcintosh,2026-06-02,2026-06-09,2,True
+e5b7a1c36c,Pure Drama,Aisha Conway,2025-10-14,2026-06-09,28,True
+e634e85156,Thurs 7-8pm,Alfie Jones,2026-01-15,2026-06-11,18,True
+e6a91b490f,Pure Drama,Teddy Hunter,2025-09-09,2025-11-25,5,False
+e6bfefd164,Tues 6-7pm,Charles Gibson,2026-04-21,2026-06-09,7,True
+e77726d8a7,Film Jrs,Nathanael Robin,2025-11-05,2025-11-19,2,False
+e77726d8a7,Film Snrs,Nathanael Robin,2025-10-22,2025-11-12,2,False
+e77726d8a7,Thurs 8-9pm,Nathanael Robin,2025-10-23,2026-06-11,26,True
+e7a4c547bb,Tues 7-8pm,Luke Judson,2025-09-02,2025-11-25,12,False
+e7c95493cb,Tues 6-7pm,Etta Brooks,2025-11-04,2026-06-09,27,True
+e7cad535d6,Film Snrs,Aidan Morley,2025-09-10,2026-03-11,12,False
+e8ae4b69ff,Pure Drama,Elliot Hall,2026-04-21,2026-06-09,7,True
+e930934b05,Film Jrs,Sam Williams,2026-04-29,2026-06-03,3,True
+e930934b05,Tues 6-7pm,Sam Williams,2026-03-03,2026-03-10,3,False
+e930934b05,art4film 3,Sam Williams,2026-04-21,2026-06-09,8,True
+ea4cfe4ccf,Thurs 6-7pm,Sam Glancy,2025-09-04,2026-06-11,34,True
+ea738e9c48,Wed 7-8pm,Alice Storey,2026-03-18,2026-06-10,10,True
+eae0ca13f4,Pure Drama,Wren Cornforth,2026-03-24,2026-06-09,9,True
+ee2a5d2257,Tues 7-8pm,Charlotte Whittaker,2025-09-02,2025-09-09,2,False
+efa20e93d9,Thurs 8-9pm,Lucy Wallis,2025-09-04,2025-10-09,6,False
+f06b524bfa,art4film 3,Josie Carbado,2026-04-21,2026-06-09,8,True
+f0ebec772d,Thurs 6-7pm,Olivia Iredale,2025-09-04,2026-05-14,7,True
+f1c3bdcf22,Film Snrs,Keir McFarlane,2025-09-10,2026-03-25,12,False
+f204ae44e7,Thurs 6-7pm,Lilah Murjan,2025-09-04,2026-06-11,34,True
+f3e0ba0f5c,Film Snrs,Lucy Hunter,2025-09-10,2026-06-10,17,True
+f49a0cd576,Sat 11-12pm,Beth Richards,2026-01-10,2026-06-13,19,True
+f528af12ef,Pure Drama,Alba,2025-09-23,2025-09-30,2,False
+f55ef1c435,Film Jrs,Teddy Longmuir,2026-04-01,2026-04-29,2,False
+f622827e50,Pure Drama,Kasper Pratt,2025-09-23,2025-12-09,11,False
+f66fe9b222,Film Jrs,Maria Andriianova,2025-09-03,2026-05-13,16,True
+f6bbe32784,Tues 5-6pm,River Savage,2025-09-02,2025-09-30,5,False
+f6bbe32784,Tues 6-7pm,River Savage,2025-09-09,2026-06-09,34,True
+f6cf33f188,Thurs 8-9pm,Xavier Whinham,2025-11-27,2026-06-11,23,True
+f892d7ea5d,Sat 10-11am,Iris Douglas,2026-01-31,2026-03-07,5,False
+f89d873171,Pure Drama,Connie Crammond,2025-09-09,2025-09-23,3,False
+f8c43e155f,Social Growth,Alfie,2026-04-23,2026-05-21,5,True
+f9c3c3642b,Stop Mo Sat 2-5pm,Evan Mahoney,2026-06-06,2026-06-06,2,True
+f9fd6d15d5,Film Snrs,Tom Whiffin,2025-09-10,2026-04-22,14,False
+fb0fae4294,Sat 10-11am,Lewis Fuller,2025-09-27,2025-10-04,2,False
+fb0fae4294,Wed 7-8pm,Lewis Fuller,2025-09-17,2025-09-17,1,False
+fb50c85480,Sat 10-11am,Ralph wheatley,2026-01-24,2026-03-07,6,False
+fb7266eaab,Tues 7-8pm,Jack Dobson,2026-02-10,2026-03-24,6,False
+fb97046952,Thurs 6-7pm,Lois Fordy,2025-09-04,2026-06-11,34,True
+fbd33c98cc,Pure Drama,Rosie Wardle,2025-09-02,2026-03-31,16,False
+fbd33c98cc,Thurs 6-7pm,Rosie Wardle,2025-09-04,2025-12-18,15,False
+fc188cc3ee,Thurs 8-9pm,Luke Cummings,2025-10-16,2026-06-11,28,True
+fd0fb37d54,Tues 7-8pm,Lily Phillips,2025-09-02,2025-09-16,3,False
+fd0fb37d54,Tues 8-9pm,Lily Phillips,2025-09-02,2026-02-10,21,False
+ff26809af4,Sat 10-11am,Alice Bartlett-Petrie,2026-04-25,2026-06-13,7,True
+ff58214a04,Social Growth,Lincoln Hardy,2026-04-23,2026-05-21,5,True

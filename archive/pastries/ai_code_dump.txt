@@ -1,0 +1,732 @@
+===== migration/build_reference_index.py =====
+import pandas as pd
+from difflib import SequenceMatcher
+
+BANK_FILE = "migration/output/transactions_clean.csv"
+TRACKER_FILE = "migration/output/tanya_tracker_clean.csv"
+OUT_FILE = "migration/output/reference_index.csv"
+
+
+def similarity(a, b):
+    if pd.isna(a) or pd.isna(b):
+        return 0.0
+    return SequenceMatcher(None, str(a).lower(), str(b).lower()).ratio()
+
+
+def load_data():
+    bank = pd.read_csv(BANK_FILE)
+    tracker = pd.read_csv(TRACKER_FILE)
+    return bank, tracker
+
+
+def extract_bank_refs(bank):
+    if "transaction description" in bank.columns:
+        col = "transaction description"
+    elif "description" in bank.columns:
+        col = "description"
+    else:
+        raise ValueError(f"No usable reference column found: {bank.columns.tolist()}")
+
+    return (
+        bank[[col]]
+        .dropna()
+        .drop_duplicates()
+        .rename(columns={col: "transaction_description"})
+    )
+
+
+def extract_tracker_refs(tracker):
+    cols = [c for c in tracker.columns if "note" in c or "method" in c]
+
+    if not cols:
+        return pd.DataFrame(columns=["reference"])
+
+    refs = tracker[cols].fillna("").astype(str)
+    refs["reference"] = refs.apply(lambda r: " ".join(r.values), axis=1)
+
+    return refs[["reference"]].drop_duplicates()
+
+
+def build_index(bank_refs, tracker_refs):
+    rows = []
+
+    for _, b in bank_refs.iterrows():
+        b_ref = b["transaction_description"]
+
+        best_score = 0.0
+        best_match = ""
+
+        for _, t in tracker_refs.iterrows():
+            score = similarity(b_ref, t["reference"])
+
+            if score > best_score:
+                best_score = score
+                best_match = t["reference"]
+
+        rows.append({
+            "bank_reference": b_ref,
+            "tracker_reference": best_match,
+            "similarity_score": best_score
+        })
+
+    df = pd.DataFrame(rows)
+
+    high_cut = df["similarity_score"].quantile(0.95)
+    medium_cut = df["similarity_score"].quantile(0.80)
+
+    def classify(x):
+        if x >= high_cut:
+            return "high"
+        if x >= medium_cut:
+            return "medium"
+        return "low"
+
+    df["confidence"] = df["similarity_score"].apply(classify)
+
+    return df
+
+
+def main():
+    bank, tracker = load_data()
+
+    bank_refs = extract_bank_refs(bank)
+    tracker_refs = extract_tracker_refs(tracker)
+
+    index = build_index(bank_refs, tracker_refs)
+
+    print(index["confidence"].value_counts())
+
+    index.to_csv(OUT_FILE, index=False)
+    print("Saved →", OUT_FILE)
+
+
+if __name__ == "__main__":
+    main()
+===== migration/build_student_master.py =====
+import pandas as pd
+import hashlib
+
+TRACKER_FILE = "migration/output/tanya_tracker_clean.csv"
+OUT_FILE = "migration/output/student_master.csv"
+
+
+def make_id(name) -> str:
+    if pd.isna(name):
+        return "unknown"
+
+    name = str(name).lower().strip()
+
+    if not name:
+        return "unknown"
+
+    return hashlib.md5(name.encode()).hexdigest()[:10]
+
+
+def load():
+    return pd.read_csv(TRACKER_FILE)
+
+
+def build_students(df):
+    df = df.copy()
+
+    df["student_name"] = (
+        df["first_name"].astype(str).str.strip()
+        + " "
+        + df["last_name"].astype(str).str.strip()
+    )
+
+    students = df[["student_name"]].drop_duplicates()
+
+    students["student_id"] = students["student_name"].apply(make_id)
+
+    # minimal stable attributes
+    students["status"] = "active"  # placeholder for now
+
+    return students
+
+
+def main():
+    df = load()
+    students = build_students(df)
+
+    print("ROWS:", len(students))
+    print(students.head(20))
+
+    students.to_csv(OUT_FILE, index=False)
+    print("Saved →", OUT_FILE)
+
+
+if __name__ == "__main__":
+    main()
+===== migration/build_class_membership.py =====
+import pandas as pd
+
+INPUT_FILE = "migration/output/attendance_fact.csv"
+OUTPUT_FILE = "migration/output/student_class_map.csv"
+
+
+def build_class_membership():
+    df = pd.read_csv(INPUT_FILE)
+
+    # clean + stable types
+    df["date"] = pd.to_datetime(df["date"], errors="coerce")
+    df["student_name"] = df["student_name"].astype(str).str.strip()
+
+    # deterministic student_id (same logic as student_master v1)
+    df["student_id"] = df["student_name"].apply(
+        lambda x: __import__("hashlib").md5(x.encode("utf-8")).hexdigest()[:10]
+    )
+
+    # remove empty rows
+    df = df[df["status"].notna()]
+
+    grouped = df.groupby(["student_id", "class_name"]).agg(
+        student_name=("student_name", "first"),
+        first_seen=("date", "min"),
+        last_seen=("date", "max"),
+        attendance_count=("status", "count")
+    ).reset_index()
+
+    max_date = df["date"].max()
+
+    grouped["active_flag"] = grouped["last_seen"].apply(
+        lambda x: (max_date - x).days <= 60 if pd.notna(x) else False
+    )
+
+    return grouped
+
+
+if __name__ == "__main__":
+    out = build_class_membership()
+
+    print(out.head(30))
+    print("\nROWS:", len(out))
+
+    out.to_csv(OUTPUT_FILE, index=False)
+    print(f"\nSaved → {OUTPUT_FILE}")
+===== migration/build_bank_transactions.py =====
+import pandas as pd
+import glob
+
+BANK_PATH = BANK_PATH = "data/raw/bank/*.csv"  # adjust if needed
+OUT_FILE = "migration/output/transactions_raw.csv"
+
+def load_bank_files():
+    files = glob.glob(BANK_PATH)
+
+    dfs = []
+    for f in files:
+        df = pd.read_csv(f)
+        df["source_file"] = f
+        dfs.append(df)
+
+    return pd.concat(dfs, ignore_index=True)
+
+def main():
+    df = load_bank_files()
+
+    print("ROWS:", len(df))
+    print(df.head(20))
+
+    df.to_csv(OUT_FILE, index=False)
+    print("Saved →", OUT_FILE)
+
+if __name__ == "__main__":
+    main()
+===== migration/init_overrides_db.py =====
+import sqlite3
+
+DB_PATH = "data/pastries.db"
+
+
+def init_db():
+    conn = sqlite3.connect(DB_PATH)
+    cur = conn.cursor()
+
+    cur.execute("""
+    CREATE TABLE IF NOT EXISTS overrides (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        scope TEXT,
+        student_id TEXT NOT NULL,
+        class_name TEXT,
+        field TEXT NOT NULL,
+        value TEXT NOT NULL,
+        notes TEXT,
+        updated_at TEXT
+    )
+    """)
+
+    conn.commit()
+    conn.close()
+
+    print("Overrides DB initialised")
+
+
+if __name__ == "__main__":
+    init_db()
+===== migration/build_payment_resolution.py =====
+import pandas as pd
+
+BANK_FILE = "migration/output/transactions_clean.csv"
+STUDENTS_FILE = "migration/output/student_master.csv"
+OVERRIDES_FILE = "migration/manual/manual_payment_overrides.csv"
+OUT_FILE = "migration/output/payments_resolved.csv"
+
+
+def load():
+    bank = pd.read_csv(BANK_FILE)
+    students = pd.read_csv(STUDENTS_FILE)
+
+    try:
+        overrides = pd.read_csv(OVERRIDES_FILE)
+    except Exception:
+        overrides = pd.DataFrame(
+            columns=["bank_reference", "decision", "student_id", "notes"]
+        )
+
+    return bank, students, overrides
+
+
+def match_student(row, students):
+    desc = str(row.get("transaction description", "")).lower()
+
+    for _, s in students.iterrows():
+        sid = str(s.get("student_id", "")).lower()
+
+        if sid and sid in desc:
+            return s["student_id"]
+
+    for _, s in students.iterrows():
+        name = str(s.get("student_name", "")).lower()
+
+        if name and name in desc:
+            return s["student_id"]
+
+    return None
+
+
+def main():
+    bank, students, overrides = load()
+
+    override_lookup = {}
+
+    for _, row in overrides.iterrows():
+        override_lookup[str(row["bank_reference"]).strip()] = row
+
+    results = []
+
+    for _, row in bank.iterrows():
+
+        bank_ref = str(row.get("transaction description", "")).strip()
+
+        if bank_ref in override_lookup:
+
+            o = override_lookup[bank_ref]
+
+            results.append({
+                "date": row.get("transaction date"),
+                "amount": row.get("amount_signed"),
+                "bank_reference": bank_ref,
+                "student_id": o.get("student_id"),
+                "status": o.get("decision"),
+                "source": "manual_override",
+                "notes": o.get("notes")
+            })
+
+            continue
+
+        student_id = match_student(row, students)
+
+        results.append({
+            "date": row.get("transaction date"),
+            "amount": row.get("amount_signed"),
+            "bank_reference": bank_ref,
+            "student_id": student_id,
+            "status": "matched" if student_id else "unmatched",
+            "source": "auto_match",
+            "notes": ""
+        })
+
+    df = pd.DataFrame(results)
+
+    print("TOTAL:", len(df))
+    print("MATCHED:", (df["status"] == "matched").sum())
+    print("UNMATCHED:", (df["status"] == "unmatched").sum())
+    print("MANUAL:", (df["source"] == "manual_override").sum())
+
+    df.to_csv(OUT_FILE, index=False)
+
+    print("Saved →", OUT_FILE)
+
+
+if __name__ == "__main__":
+    main()
+===== migration/inspect_registers.py =====
+import os
+import pandas as pd
+
+SOURCE_DIR = "migration/source_registers"
+
+def inspect_file(path):
+    try:
+        xls = pd.ExcelFile(path)
+        sheets = xls.sheet_names
+
+        summary = {
+            "file": os.path.basename(path),
+            "sheets": len(sheets),
+            "sheet_names": sheets
+        }
+
+        # inspect first sheet only for structure
+        df = xls.parse(sheets[0])
+
+        summary["columns"] = list(df.columns)
+        summary["rows"] = len(df)
+
+        return summary
+
+    except Exception as e:
+        return {
+            "file": os.path.basename(path),
+            "error": str(e)
+        }
+
+def run():
+    results = []
+
+    for f in os.listdir(SOURCE_DIR):
+        if f.endswith(".xlsx"):
+            path = os.path.join(SOURCE_DIR, f)
+            results.append(inspect_file(path))
+
+    for r in results:
+        print("\n---")
+        for k, v in r.items():
+            print(k, ":", v)
+
+if __name__ == "__main__":
+    run()
+===== migration/clean_bank_transactions.py =====
+import pandas as pd
+
+IN_FILE = "migration/output/transactions_raw.csv"
+OUT_FILE = "migration/output/transactions_clean.csv"
+
+
+def clean(df):
+    df = df.copy()
+
+    # 1. standardise column names
+    df.columns = [c.lower().strip() for c in df.columns]
+
+    print("COLUMNS FOUND:", df.columns.tolist())
+
+    # 2. drop fully empty rows
+    df = df.dropna(how="all")
+
+    return df
+
+
+def normalise_amounts(df):
+    df = df.copy()
+
+    debit_col = None
+    credit_col = None
+
+    for c in df.columns:
+        if "debit" in c:
+            debit_col = c
+        if "credit" in c:
+            credit_col = c
+
+    if debit_col is None and credit_col is None:
+        raise ValueError(f"No debit/credit columns found in: {df.columns.tolist()}")
+
+    df["amount_signed"] = 0
+
+    if debit_col:
+        df[debit_col] = pd.to_numeric(df[debit_col], errors="coerce").fillna(0)
+        df["amount_signed"] -= df[debit_col]
+
+    if credit_col:
+        df[credit_col] = pd.to_numeric(df[credit_col], errors="coerce").fillna(0)
+        df["amount_signed"] += df[credit_col]
+
+    return df
+
+
+def main():
+    df = pd.read_csv(IN_FILE)
+
+    df_clean = clean(df)
+    df_clean = normalise_amounts(df_clean)
+
+    print("CLEAN ROWS:", len(df_clean))
+    print(df_clean.head(20))
+
+    df_clean.to_csv(OUT_FILE, index=False)
+    print("Saved →", OUT_FILE)
+
+
+if __name__ == "__main__":
+    main()
+===== migration/build_reconciliation_layer.py =====
+import pandas as pd
+
+BANK_FILE = "migration/output/transactions_clean.csv"
+TRACKER_FILE = "migration/output/tanya_tracker_clean.csv"
+STUDENT_FILE = "migration/output/student_master.csv"
+OUT_FILE = "migration/output/reconciliation.csv"
+
+
+def load():
+    return (
+        pd.read_csv(BANK_FILE),
+        pd.read_csv(TRACKER_FILE),
+        pd.read_csv(STUDENT_FILE)
+    )
+
+
+def build_tracker_students(tracker, students):
+    df = tracker.copy()
+
+    df["student_name"] = (
+        df["first_name"].astype(str).str.strip()
+        + " "
+        + df["last_name"].astype(str).str.strip()
+    )
+
+    return df.merge(students, on="student_name", how="left")
+
+
+def simple_match(bank, tracker):
+    results = []
+
+    for _, b in bank.iterrows():
+        ref = str(b.get("transaction description", ""))
+
+        best = None
+
+        for _, t in tracker.iterrows():
+            name = str(t.get("student_name", ""))
+
+            if name.lower() in ref.lower():
+                best = t["student_id"]
+                break
+
+        results.append({
+            "bank_reference": ref,
+            "matched_student_id": best,
+            "matched": best is not None
+        })
+
+    return pd.DataFrame(results)
+
+
+def main():
+    bank, tracker, students = load()
+
+    tracker = build_tracker_students(tracker, students)
+
+    recon = simple_match(bank, tracker)
+
+    print(recon.head(20))
+    print("MATCHED:", recon["matched"].sum())
+
+    recon.to_csv(OUT_FILE, index=False)
+    print("Saved →", OUT_FILE)
+
+
+if __name__ == "__main__":
+    main()
+===== migration/extract_attendance.py =====
+import pandas as pd
+
+FILE = "migration/source_registers/Register 25_26.xlsx"
+
+
+def extract_sheet(sheet_name):
+    df = pd.read_excel(FILE, sheet_name=sheet_name)
+
+    student_col = df.columns[0]
+
+    meta_cols = [
+        "DOB",
+        "Parent/Carer",
+        "Mobile",
+        "Promo ",
+        "Need to knows"
+    ]
+
+    date_cols = [c for c in df.columns if c not in meta_cols and c != student_col]
+
+    records = []
+
+    current_status = "active"
+
+    for _, row in df.iterrows():
+        student = row[student_col]
+
+        # section switch
+        if isinstance(student, str):
+            if student.strip().lower() == "former":
+                current_status = "former"
+                continue
+
+            if student.strip().lower() == "incident/accident form":
+                continue
+
+        if pd.isna(student):
+            continue
+
+        for col in date_cols:
+            value = row[col]
+
+            if pd.isna(value):
+                continue
+
+            value = str(value).strip()
+
+            if value == "1.0":
+                value = "1"
+            if value == "0.0":
+                value = "0"
+
+            records.append({
+                "student_name": student,
+                "class_name": sheet_name,
+                "date": col,
+                "status": value,
+                "section_status": current_status
+            })
+
+    return pd.DataFrame(records)
+
+
+def extract_all():
+    xls = pd.ExcelFile(FILE)
+
+    all_data = []
+
+    for sheet in xls.sheet_names:
+        name = sheet.lower()
+
+        if "archive" in name:
+            continue
+        if "student data" in name:
+            continue
+        if "no consent" in name:
+            continue
+
+        df = extract_sheet(sheet)
+        all_data.append(df)
+
+    return pd.concat(all_data, ignore_index=True)
+
+
+if __name__ == "__main__":
+    out = extract_all()
+
+    print(out.head(30))
+    print("\nROWS:", len(out))
+
+    out.to_csv("migration/output/attendance_fact.csv", index=False)
+    print("\nSaved → migration/output/attendance_fact.csv")
+===== migration/build_tanya_tracker.py =====
+import pandas as pd
+import glob
+
+OUT_FILE = "migration/output/tanya_tracker_clean.csv"
+
+
+def load():
+    files = glob.glob("data/raw/payments_tracker/*")
+
+    if not files:
+        raise FileNotFoundError("No tracker file found in data/raw/payments_tracker")
+
+    path = files[0]
+    print("USING FILE:", path)
+
+    if path.endswith(".csv"):
+        return pd.read_csv(path)
+    else:
+        return pd.read_excel(path)
+
+
+def clean_columns(df):
+    df = df.copy()
+
+    df.columns = [
+        c.lower().strip().replace(" ", "_")
+        for c in df.columns
+    ]
+
+    print("COLUMNS:", df.columns.tolist())
+    return df
+
+
+def basic_hygiene(df):
+    df = df.copy()
+
+    # drop fully empty rows
+    df = df.dropna(how="all")
+
+    # strip all string fields safely
+    for c in df.columns:
+        if df[c].dtype == "object":
+            df[c] = df[c].astype(str).str.strip()
+
+    return df
+
+
+def main():
+    df = load()
+    df = clean_columns(df)
+    df = basic_hygiene(df)
+
+    print("ROWS:", len(df))
+    print(df.head(20))
+
+    df.to_csv(OUT_FILE, index=False)
+    print("Saved →", OUT_FILE)
+
+
+if __name__ == "__main__":
+    main()
+===== scripts/run_ingestion.py =====
+import pandas as pd
+from engine.ingestion.ingestion_engine import IngestionEngine
+
+
+BANK_FILE = "migration/output/transactions_clean.csv"
+TRACKER_FILE = "migration/output/tanya_tracker_clean.csv"
+OUT_FILE = "migration/output/ingestion_output.csv"
+
+
+def main():
+    bank = pd.read_csv(BANK_FILE)
+    tracker = pd.read_csv(TRACKER_FILE)
+
+    engine = IngestionEngine(bank, tracker)
+
+    tracker_results = engine.reconcile_tracker_to_bank()
+    bank_results = engine.reconcile_bank_to_tracker()
+
+    all_results = tracker_results + bank_results
+
+    df = pd.DataFrame(all_results)
+
+    print("TRACKER RESULTS:", len(tracker_results))
+    print("BANK RESULTS:", len(bank_results))
+    print("TOTAL:", len(df))
+
+    print(df["match_status"].value_counts())
+
+    df.to_csv(OUT_FILE, index=False)
+    print("Saved →", OUT_FILE)
+
+
+if __name__ == "__main__":
+    main()
