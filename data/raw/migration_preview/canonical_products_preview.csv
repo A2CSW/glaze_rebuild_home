@@ -1,0 +1,12 @@
+product_id,name,programme_id,status
+PROD-0715D0DA,Drama Membership,PRG-CD672AF2,Active
+PROD-FF43ACF1,Filmmaking Membership,PRG-99D34EA9,Active
+PROD-B70CC870,Dual Membership,,Active
+PROD-DCB5DF9F,Showreel Package,,Active
+PROD-85D55AA8,Summer Shoot,,Active
+PROD-73D17196,Art4Film Term Pass,PRG-DF907D39,Active
+PROD-775F7D96,Stopmo Term Pass,PRG-E47A03C9,Active
+PROD-CE55318C,Full Season Pass,,Active
+PROD-FB3B3362,Summer Camp Member,,Active
+PROD-ECE24C18,Summer Camp Non-Member,,Active
+PROD-16D4D978,Ultimate Summer Pass,,Active

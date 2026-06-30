@@ -1,0 +1,14 @@
+class_id,name,programme_id,calendar_id,day,time,status
+CLS-0FF34E43,Saturday Drama (13-17s) 11-12am,PRG-72DBD042,,,,Active
+CLS-FD1F9245,Saturday Drama (4-8) 9-10am,PRG-8CF70CA7,,,,Active
+CLS-749792EF,Saturday Drama (8-12s) 10-11am,PRG-4091B53A,,,,Active
+CLS-24FF3083,Thursday Drama (10-13s) 7-8pm,PRG-4091B53A,,,,Active
+CLS-57B9DF09,Thursday Drama (13-17s) 8-9pm,PRG-72DBD042,,,,Active
+CLS-235EC4C5,Thursday Drama (8-12) 6-7pm,PRG-4091B53A,,,,Active
+CLS-882BCEC1,Tuesday Drama (10-13) 7-8pm,PRG-4091B53A,,,,Active
+CLS-83E15ABF,Tuesday Drama (13-17) 8-9pm,PRG-72DBD042,,,,Active
+CLS-446B3DA8,Tuesday Drama (4-8) 5-6pm,PRG-8CF70CA7,,,,Active
+CLS-694E48E1,Tuesday Drama (8-12s) 6-7pm,PRG-4091B53A,,,,Active
+CLS-01EE072E,Wednesday Drama (11-16s) 7-8pm,PRG-72DBD042,,,,Active
+CLS-7B6A8EE3,Wednesday Filmmaking & Editing Class (13-17s) 5-7pm,PRG-72DBD042,,,,Active
+CLS-7173C854,Wednesday Filmmaking & Editing Class (8-12s) 5-7pm,PRG-4091B53A,,,,Active

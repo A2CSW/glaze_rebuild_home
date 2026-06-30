@@ -1,0 +1,144 @@
+====================================================================================================
+FILE: 1_students_master copy.csv
+ROWS: 489
+COLUMNS (11):
+  - student_id
+  - full_name
+  - dob
+  - status
+  - membership_type
+  - cohort
+  - guardian_name
+  - guardian_mobile
+  - search_rule
+  - expected_amount
+  - typical_day
+
+FIRST 3 ROWS:
+student_id          full_name        dob status membership_type cohort        guardian_name guardian_mobile search_rule expected_amount typical_day
+  STU-0001 Aaron Henzell-Hill 2009-07-13 Former                        Carolyn Henzell-Hill    7446258822.0                                        
+  STU-0002        Abbie Laing 2011-08-15 Former                                 Susan Laing    7939681144.0                                        
+  STU-0003      Abi Dickinson 2008-05-20 Former                                 Sarah Dixon    7500832788.0                                        
+
+====================================================================================================
+FILE: 2_payments_master copy.csv
+ROWS: 195
+COLUMNS (12):
+  - student_id
+  - Sep
+  - Oct
+  - Nov
+  - Dec
+  - Jan
+  - Feb
+  - Mar
+  - Apr
+  - May
+  - Owed
+  - NOTES
+
+FIRST 3 ROWS:
+student_id  Sep  Oct  Nov  Dec  Jan  Feb  Mar  Apr  May Owed   NOTES
+  STU-0001 50.0  0.0 50.0  0.0  0.0  0.0  0.0  0.0  0.0  100 emailed
+  STU-0007  0.0 44.0 44.0 44.0 44.0 44.0 44.0  0.0  0.0    -        
+  STU-0009  0.0 44.0 44.0 44.0 44.0 44.0 44.0 44.0 44.0    -       -
+
+====================================================================================================
+FILE: 3_attendance_tracker copy.csv
+ROWS: 489
+COLUMNS (5):
+  - student_id
+  - full_name
+  - status
+  - classes
+  - attendance_notes
+
+FIRST 3 ROWS:
+student_id          full_name status   classes attendance_notes
+  STU-0001 Aaron Henzell-Hill Former nan | nan                 
+  STU-0002        Abbie Laing Former nan | nan                 
+  STU-0003      Abi Dickinson Former nan | nan                 
+
+====================================================================================================
+FILE: 4_medical_and_permissions copy.csv
+ROWS: 489
+COLUMNS (5):
+  - student_id
+  - full_name
+  - membership_level
+  - medical_notes
+  - media_consent
+
+FIRST 3 ROWS:
+student_id          full_name membership_level                                                         medical_notes media_consent
+  STU-0001 Aaron Henzell-Hill           Former                                                     Hay fever, eczema           Yes
+  STU-0002        Abbie Laing           Former                                                                                 Yes
+  STU-0003      Abi Dickinson           Former Anxiety disorder/autism (under investigation for confirmed diagnosis)           Yes
+
+====================================================================================================
+FILE: 5_students_contacts copy.csv
+ROWS: 489
+COLUMNS (12):
+  - student_id
+  - full_name
+  - dob
+  - status
+  - guardian_1_name
+  - guardian_1_mobile
+  - guardian_1_email
+  - guardian_2_name
+  - guardian_2_mobile
+  - guardian_2_email
+  - emergency_name
+  - emergency_mobile
+
+FIRST 3 ROWS:
+student_id          full_name        dob status      guardian_1_name guardian_1_mobile      guardian_1_email guardian_2_name guardian_2_mobile guardian_2_email emergency_name emergency_mobile
+  STU-0001 Aaron Henzell-Hill 2009-07-13 Former Carolyn Henzell-Hill        7446258822  carolynhh6@gmail.com                                                                                   
+  STU-0002        Abbie Laing 2011-08-15 Former          Susan Laing        7939681144 susanlaing@live.co.uk                                                                                   
+  STU-0003      Abi Dickinson 2008-05-20 Former          Sarah Dixon        7500832788 sarahjay73@icloud.com                                                                                   
+
+====================================================================================================
+FILE: 6_memberships copy.csv
+ROWS: 0
+COLUMNS (6):
+  - student_id
+  - membership_type
+  - drama
+  - filmmaking
+  - sibling_position
+  - monthly_fee
+
+FIRST 3 ROWS:
+(empty file)
+
+====================================================================================================
+FILE: 7_student_addons copy.csv
+ROWS: 0
+COLUMNS (7):
+  - student_id
+  - addon_type
+  - addon_name
+  - start_date
+  - end_date
+  - price
+  - status
+
+FIRST 3 ROWS:
+(empty file)
+
+====================================================================================================
+FILE: 8_enrolments copy.csv
+ROWS: 0
+COLUMNS (7):
+  - student_id
+  - course_name
+  - course_type
+  - fee
+  - start_date
+  - end_date
+  - status
+
+FIRST 3 ROWS:
+(empty file)
+
